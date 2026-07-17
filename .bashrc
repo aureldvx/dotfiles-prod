@@ -33,17 +33,17 @@ backup() {
 # sources internes
 # ================================
 
-source ./bash_aliases.sh
+source ~/.dotfiles/bash_aliases.sh
 
-source ./ssh/common.sh
-source ./ssh/add_key.sh
-source ./ssh/delete_key.sh
-source ./ssh/list_keys.sh
+source ~/.dotfiles/ssh/common.sh
+source ~/.dotfiles/ssh/add_key.sh
+source ~/.dotfiles/ssh/delete_key.sh
+source ~/.dotfiles/ssh/list_keys.sh
 
-source ./docker/common.sh
-source ./docker/shortcuts.sh
-source ./docker/backup.sh
-source ./docker/restore.sh
+source ~/.dotfiles/docker/common.sh
+source ~/.dotfiles/docker/shortcuts.sh
+source ~/.dotfiles/docker/backup.sh
+source ~/.dotfiles/docker/restore.sh
 
 # ================================
 # outils externes

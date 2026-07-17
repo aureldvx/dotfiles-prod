@@ -15,6 +15,7 @@ curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh 
 # Installation de ble.sh (https://github.com/akinomyoga/ble.sh)
 git clone --recursive --depth 1 --shallow-submodules https://github.com/akinomyoga/ble.sh.git
 make -C ble.sh install PREFIX=~/.local
+rm -rf ./ble.sh
 
 # Installation de starship (https://starship.rs/)
 curl -sS https://starship.rs/install.sh | sh
@@ -23,9 +24,9 @@ curl -sS https://starship.rs/install.sh | sh
 ## Application
 
 ```shell
-ln -s ~/.vimrc ~/.dotfiles/.vimrc
-ln -s ~/.blerc ~/.dotfiles/.blerc
-mkdir -p ~/.config && ln -s ~/.config/starship.toml ~/.dotfiles/starship.toml
+ln -s ~/.dotfiles/.vimrc ~/.vimrc
+ln -s ~/.dotfiles/.blerc ~/.blerc
+mkdir -p ~/.config && ln -s ~/.dotfiles/starship.toml ~/.config/starship.toml
 ```
 
 ```shell
