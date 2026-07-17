@@ -1,10 +1,10 @@
 " ==============================================================================
 "  CONFIGURATION DE BASE (ADMINISTRATION VPS)
 " ==============================================================================
-set nocompatible              " Désactive la compatibilité vi (indispensable)
-set encoding=utf-8            " Encodage universel
+set nocompatible               " Désactive la compatibilité vi (indispensable)
+set encoding=utf-8             " Encodage universel
 set backspace=indent,eol,start " Comportement moderne de la touche Retour arrière
-set history=1000              " Historique des commandes étendu
+set history=1000               " Historique des commandes étendu
 
 " --- Recherche intelligente ---
 set hlsearch                  " Surligne les correspondances de recherche
@@ -28,8 +28,12 @@ set tabstop=4                 " Largeur d'une tabulation
 set shiftwidth=4              " Largeur d'indentation pour '>' et '<'
 set expandtab                 " Transforme les tabulations en espaces (standard VPS)
 
+" --- Possibilité d'avoir des .vimrc locaux ---
+set exrc                      " Permet à Vim de lire un fichier .vimrc local s'il existe
+set secure                    " Désactive les commandes shell (autocmd, !) dans le vimrc local pour ta sécurité
+
 " ==============================================================================
-"  THÈME VISUEL & TRUE COLORS (NATIVEMENT VIA GHOSTTY)
+"  THÈME VISUEL & TRUE COLORS
 " ==============================================================================
 syntax on                     " Active la coloration syntaxique
 set termguicolors             " Active True Color
