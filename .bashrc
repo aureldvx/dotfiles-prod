@@ -29,25 +29,6 @@ backup() {
 }
 
 # ================================
-# outils externes
-# ================================
-
-# initialise fzf
-if command -v fzf >/dev/null 2>&1; then
-  eval "$(fzf --bash)"
-fi
-
-# initialise la coloration syntaxique et les suggestions de saisie à la volée
-if [[ -f ~/.local/share/blesh/ble.sh ]]; then
-  source ~/.local/share/blesh/ble.sh
-fi
-
-# initialise zoxide uniquement s'il est installé sur le système
-if command -v zoxide >/dev/null 2>&1; then
-  eval "$(zoxide init bash)"
-fi
-
-# ================================
 # sources internes
 # ================================
 
@@ -62,3 +43,27 @@ source ./docker/common.sh
 source ./docker/shortcuts.sh
 source ./docker/backup.sh
 source ./docker/restore.sh
+
+# ================================
+# outils externes
+# ================================
+
+# initialise fzf
+if command -v fzf >/dev/null 2>&1; then
+  eval "$(fzf --bash)"
+fi
+
+# initialise ble.sh
+if [[ -f ~/.local/share/blesh/ble.sh ]]; then
+  source ~/.local/share/blesh/ble.sh
+fi
+
+# initialise zoxide
+if command -v zoxide >/dev/null 2>&1; then
+  eval "$(zoxide init bash)"
+fi
+
+# initialise starship
+if command -v starship >/dev/null 2>&1; then
+  eval "$(starship init bash)"
+fi
