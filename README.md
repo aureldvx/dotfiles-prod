@@ -19,6 +19,9 @@ rm -rf ./ble.sh
 
 # Installation de starship (https://starship.rs/)
 curl -sS https://starship.rs/install.sh | sh
+
+# Installation de catppuccin-vim (https://github.com/catppuccin/vim)
+git clone https://github.com/catppuccin/vim.git ~/.vim/pack/vendor/start/catppuccin
 ```
 
 ## Application
