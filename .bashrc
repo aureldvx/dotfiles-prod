@@ -4,6 +4,7 @@
 
 export TERM="xterm-256color"
 export EDITOR="vim"
+export DOCKER_HOST=unix:///run/user/1001/docker.sock # docker rootless socket path
 
 # ================================
 # bindings
