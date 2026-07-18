@@ -97,11 +97,6 @@ function dps() {
   docker ps --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}"
 }
 
-# (start|stop|restart|status) docker rootless service
-function dock() {
-  systemctl --user "$@" docker
-}
-
 # supprime toutes les ressources inutilisées
 function dclean() {
   docker system prune -a
