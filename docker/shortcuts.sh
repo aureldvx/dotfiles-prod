@@ -106,3 +106,8 @@ function dclean() {
 function dtop() {
   docker stats --all --format "table {{.Name}}\t{{.CPUPerc}}\t{{.MemUsage}}\t{{.NetIO}}"
 }
+
+# Alias caddy vers le conteneur de l'infra
+function caddy() {
+  docker exec infra-caddy caddy "$@"
+}
