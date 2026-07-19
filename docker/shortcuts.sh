@@ -111,3 +111,8 @@ function dtop() {
 function caddy() {
   docker exec -w /etc/caddy infra-caddy caddy "$@"
 }
+
+# Ouvre le Caddyfile dockerisé dans l'éditeur
+function caddyfile() {
+  vim /srv/_infra_/caddy/Caddyfile
+}
