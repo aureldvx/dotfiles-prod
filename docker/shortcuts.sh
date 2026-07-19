@@ -109,5 +109,5 @@ function dtop() {
 
 # Alias caddy vers le conteneur de l'infra
 function caddy() {
-  docker exec infra-caddy caddy "$@"
+  docker exec -w /etc/caddy infra-caddy caddy "$@"
 }
