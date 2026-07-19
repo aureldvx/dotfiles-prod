@@ -78,6 +78,13 @@ function dcd() {
   docker compose "${compose_flags[@]}" down --remove-orphans "$@"
 }
 
+# `docker compose restart`
+function dcrs() {
+  local compose_flags=()
+  _detect_compose_files
+  docker compose "${compose_flags[@]}" restart "$@"
+}
+
 # `docker compose logs` (avec suivi optionnel, ex: dcl -f)
 function dcl() {
   local compose_flags=()
