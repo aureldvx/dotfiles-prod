@@ -13,8 +13,9 @@ sudo apt install fzf
 curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
 
 # Installation de ble.sh (https://github.com/akinomyoga/ble.sh)
-git clone --recursive --depth 1 --shallow-submodules https://github.com/akinomyoga/ble.sh.git
-make -C ble.sh install PREFIX=~/.local
+git clone --recursive --depth 1 --shallow-submodules https://github.com/akinomyoga/ble.sh.git; \
+sudo apt install make; \
+make -C ble.sh install PREFIX=~/.local; \
 rm -rf ./ble.sh
 
 # Installation de starship (https://starship.rs/)
@@ -27,8 +28,8 @@ git clone https://github.com/catppuccin/vim.git ~/.vim/pack/vendor/start/catppuc
 ## Application
 
 ```shell
-ln -s ~/.dotfiles/.vimrc ~/.vimrc
-ln -s ~/.dotfiles/.blerc ~/.blerc
+ln -s ~/.dotfiles/.vimrc ~/.vimrc; \
+ln -s ~/.dotfiles/.blerc ~/.blerc; \
 mkdir -p ~/.config && ln -s ~/.dotfiles/starship.toml ~/.config/starship.toml
 ```
 
